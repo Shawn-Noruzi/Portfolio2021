@@ -7,7 +7,7 @@ import { css } from "@emotion/css";
 
 const TitleText = styled.p`
   font-size: calc(20px + (20-16) * ((100vw - 320px) / (1600-300)));
-  font-family: RobotoBold;
+  font-family: RobotoThin;
   margin-bottom: 20px;
   margin-top: 50px;
   font-weight: 500;
