@@ -54,6 +54,8 @@ const Text = styled.p`
 const LinkedText = styled.p`
   font-size: 18px;
   font-weight: 500;
+  cursor: pointer;
+transform: scale(1.1);
   font-family: RobotoReg;
   &:hover {
         transition: 0.2s;
@@ -75,7 +77,7 @@ const SpacerText = styled.p`
 
 const LinksRow = styled(Row)`
   @media screen and (max-width: 400px) {
-    margin-top:50px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     text-align: start;
