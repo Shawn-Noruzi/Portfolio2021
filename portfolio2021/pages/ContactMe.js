@@ -166,10 +166,15 @@ export default class pages extends Component {
             margin-top: 50px;
             margin-bottom: 100px;
             background-size: cover;
+            background: center;
             padding: 70px;
             background-blend-mode: screen;
             background-image: linear-gradient(black, black),
               url(https://images.pexels.com/photos/3935702/pexels-photo-3935702.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+              @media screen and (max-width: 450px) {
+                padding: 70px 5px 70px 5px
+                  }
+          
           `}
         >
           <Container>
@@ -177,9 +182,13 @@ export default class pages extends Component {
               <Col
                 className={css`
                   background-color: white;
-
                   border-top-left-radius: 25px;
                   border-bottom-left-radius: 25px;
+                  @media screen and (max-width: 990px) {
+                    border-top-left-radius: 25px;
+                    border-top-right-radius: 25px;
+                    border-bottom-left-radius: 0px;
+                  }
                 `}
                 lg={5}
               >
@@ -199,7 +208,6 @@ export default class pages extends Component {
                             font-size: 30px;
                             margin-right: 23px;
                             margin-bottom: 40px;
-                            margin-left: 10px;
                           `}
                         />
                         <Text>shawn.noruzi@gmail.com</Text>
@@ -213,7 +221,6 @@ export default class pages extends Component {
                             font-size: 30px;
                             margin-right: 23px;
                             margin-bottom: 40px;
-                            margin-left: 10px;
                           `}
                         />
 
@@ -227,10 +234,9 @@ export default class pages extends Component {
                             font-size: 30px;
                             margin-right: 23px;
                             margin-bottom: 40px;
-                            margin-left: 10px;
                           `}
                         />
-                        <Text>linkedin.com/in/shawn-noruzi/</Text>
+                        <Text>linkedin.com/in/shawn-noruzi</Text>
                       </Row>
                     </a>
                     <a href="https://github.com/Shawn-Noruzi">
@@ -240,7 +246,6 @@ export default class pages extends Component {
                             font-size: 30px;
                             margin-right: 23px;
                             margin-bottom: 40px;
-                            margin-left: 10px;
                           `}
                         />
                         <Text>github.com/Shawn-Noruzi</Text>
@@ -254,8 +259,13 @@ export default class pages extends Component {
                   backdrop-filter: blur(15px);
                   border-top-right-radius: 25px;
                   border-bottom-right-radius: 25px;
+                  @media screen and (max-width: 990px) {s
+                    border-top-right-radius: 0px;
+                    border-bottom-left-radius: 25px;
+                    border-bottom-right-radius: 25px;
+                  }
                 `}
-                lg={6}
+                xs={12} lg={6}
               >
                 <form onSubmit={this.handleSubmit}>
                   <Container>
@@ -368,7 +378,7 @@ export default class pages extends Component {
                       </Col>
                     </Row>
                     <Row>
-                      <Col lg={{ size: "3", offset: "6" }}>
+                      <Col lg={{ size: "3"}}>
                         <button
                           className={this.state.menu ? "" : "buttonSubmit"}
                           disabled={this.state.sent}
