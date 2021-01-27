@@ -100,7 +100,7 @@ export default class pages extends Component {
     event.preventDefault();
 
     //This templateId is created in EmailJS.com
-    const templateId = "template_50281sf";
+    const templateId = process.env.EMAILJS_TEMPLATE_ID;
 
     //This is a custom method from EmailJS that takes the information
     //from the form and sends the email with the information gathered
@@ -118,10 +118,10 @@ export default class pages extends Component {
   sendFeedback = (templateId, variables) => {
     emailjs
       .send(
-        "service_1d8asjm",
+        process.env.EMAILJS_SERVICE_ID,
         templateId,
         variables,
-        "user_1lYGDmBE8NDWjEU26F6GK"
+        process.env.EMAILJS_USER_ID
       )
       .then((res) => {
         // Email successfully sent alert
