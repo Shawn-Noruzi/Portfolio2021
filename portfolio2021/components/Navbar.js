@@ -16,6 +16,7 @@ const NavButton = styled.div`
   z-index: 4;
   font-size: 20px;
   margin-right: 20px;
+  padding:10px;
   font-weight: 900;
   font-family: RobotoReg;
   letter-spacing: 4px;
