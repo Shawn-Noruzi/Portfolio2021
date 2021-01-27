@@ -351,12 +351,13 @@ export default class pages extends Component {
                   <div className="card-body">
                     <CardText>Portfolio</CardText>
                     <p className="card-text">
-                      After creating the slider portfolio, I wanted to create a
-                      more conventional website while also picking up a few new
-                      skils - mainly next.js and typescript. I focused on
-                      creating a responsive, statically typed, easy to navigate,
-                      and consume site that would utilize a single source of
-                      truth for its data to create many components.
+                      My 2nd iteration on a portfolio. I wanted to create a more
+                      conventional website compared to my slider portfolio while
+                      also picking up a few new skils - mainly next.js and
+                      typescript. I focused on creating a responsive, statically
+                      typed, easy to navigate, and consume site that would
+                      utilize a single source of truth for its data to create
+                      many components.
                     </p>
                     <Row>
                       <Col>

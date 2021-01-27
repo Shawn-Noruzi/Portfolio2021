@@ -188,7 +188,7 @@ class Navbar extends Component {
                   }}
                   className="linkText"
                 >
-                  {this.state.url == "/Contact" ? "- Contact - " : "Contact"}
+                  {this.state.url == "/ContactMe" ? "- Contact - " : "Contact"}
                 </LinkText>
               </Link>
             </div>

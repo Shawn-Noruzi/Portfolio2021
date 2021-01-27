@@ -22,9 +22,40 @@ a {
   margin: 15px;
 }
 
-.card-img{
-  height:100%
+.radio-input{
+  margin-top: 4px;
 }
+
+.radio-input:checked + label{
+  color:#fff;
+  font-weight:500;
+}
+
+.card-img {
+  height: 100%;
+}
+
+.input-box {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  padding: 5px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.textarea{
+  margin-bottom:10px;
+}
+
+.input-box:focus {
+  border-bottom: 2px solid #05f7ff;
+  outline: none;
+}
+
 @font-face {
   font-family: SpaceReg;
   src: url(../styles/fonts/SpaceMono-Regular.ttf);
@@ -44,7 +75,6 @@ a {
   font-family: RobotoMed;
   src: url(../styles/fonts/Roboto-Medium.ttf);
 }
-
 
 @font-face {
   font-family: RobotoThin;

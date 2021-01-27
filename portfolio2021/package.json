@@ -15,6 +15,8 @@
     "@zeit/next-less": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
     "bootstrap": "^4.6.0",
+    "classnames": "^2.2.6",
+    "emailjs-com": "^2.6.4",
     "next": "^10.0.5",
     "next-images": "^1.7.0",
     "react": "^17.0.1",
@@ -22,7 +24,8 @@
     "react-dom": "^17.0.1",
     "react-icons": "^4.1.0",
     "reactstrap": "^8.9.0",
-    "sass": "^1.32.5"
+    "sass": "^1.32.5",
+    "sweetalert2": "^10.13.3"
   },
   "devDependencies": {
     "@emotion/babel-plugin": "^11.1.2"
