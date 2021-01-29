@@ -382,7 +382,7 @@ export default class pages extends Component {
                       <p className="card-text">
                         My 2nd iteration on a portfolio. I wanted to create a
                         more conventional website compared to my slider
-                        portfolio while also picking up a few new skils - mainly
+                        portfolio while also picking up a few new skills - mainly
                         next.js and typescript. I focused on creating a
                         responsive, statically typed, easy to navigate, and
                         consume site that would utilize a single source of truth
