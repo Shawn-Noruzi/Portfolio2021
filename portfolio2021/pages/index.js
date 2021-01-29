@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import styled from "@emotion/styled";
 import { css } from "@emotion/css";
 import { Container, Row, Col } from "reactstrap";
+import { motion } from "framer-motion";
 
 //Landing Page
 const BgText = styled.p`
@@ -102,26 +103,125 @@ export default function Home() {
         `}
       >
         <Row>
-          <Text>Hello! </Text>
+          <motion.div
+            transition={{ duration: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            drag
+            dragConstraints={{
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+            }}
+          >
+            <Text>Hello! </Text>
+          </motion.div>
         </Row>
         <Row>
-          <Text>I'm </Text> <NameText>Shayan,</NameText>
+          <motion.div
+            transition={{ duration: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            drag
+            dragConstraints={{
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+            }}
+          >
+            <Text>I'm </Text>
+          </motion.div>
+          <motion.div
+            transition={{ duration: 2 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            drag
+            dragConstraints={{
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+            }}
+          >
+            <NameText>Shayan,</NameText>
+          </motion.div>
         </Row>
         <Row>
-          <Text>I build responsive and modern websites.</Text>
+          <motion.div
+            transition={{ duration: 3 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            drag
+            dragConstraints={{
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+            }}
+          >
+            <Text>I build responsive and modern websites.</Text>
+          </motion.div>
         </Row>
 
         <LinksRow>
           <Link href="/AboutMe">
-            <LinkedText>Read about me</LinkedText>
+            <motion.div
+              transition={{ duration: 3 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              drag
+              dragConstraints={{
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+              }}
+            >
+              <LinkedText>Read about me</LinkedText>
+            </motion.div>
           </Link>
           <SpacerText> - </SpacerText>
           <Link href="/Projects">
-            <LinkedText>See my work</LinkedText>
+            <motion.div
+              transition={{ duration: 4 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              drag
+              dragConstraints={{
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+              }}
+            >
+              <LinkedText>See my work</LinkedText>
+            </motion.div>
           </Link>
           <SpacerText> - </SpacerText>
           <Link href="/ContactMe">
-            <LinkedText>Contact me</LinkedText>
+            <motion.div
+              transition={{ duration: 4 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              drag
+              dragConstraints={{
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+              }}
+            >
+              <LinkedText>Contact me</LinkedText>
+            </motion.div>
           </Link>
         </LinksRow>
       </Container>

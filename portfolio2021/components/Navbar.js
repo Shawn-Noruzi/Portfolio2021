@@ -3,7 +3,7 @@ import { withRouter } from "next/router";
 import Link from "next/link";
 import styled from "@emotion/styled";
 import Head from "next/head";
-import { css } from "@emotion/css";
+import { motion} from "framer-motion";
 
 const NavBar = styled.nav`
   padding: 30px;
@@ -16,7 +16,7 @@ const NavButton = styled.div`
   z-index: 4;
   font-size: 20px;
   margin-right: 20px;
-  padding:10px;
+  padding: 10px;
   font-weight: 900;
   font-family: RobotoReg;
   letter-spacing: 4px;
@@ -69,7 +69,7 @@ const Overlay = styled.div`
   background-color: #202329f5;
   overflow-x: hidden;
   overflow-y: hidden;
-  transition: 0.3s ease-in;
+  transition: 0.15s ease-in;
 `;
 
 const OverlayContent = styled.div`
@@ -114,7 +114,12 @@ class Navbar extends Component {
   };
   render() {
     return (
-      <React.Fragment>
+      <motion.div
+        transition={{ duration: 2 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
         <Head>
           <link
             rel="stylesheet"
@@ -225,7 +230,7 @@ class Navbar extends Component {
             </div>
           </OverlayContent>
         </Overlay>
-      </React.Fragment>
+      </motion.div>
     );
   }
 }

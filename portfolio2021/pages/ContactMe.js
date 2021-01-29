@@ -8,12 +8,13 @@ import { AiOutlineMail } from "react-icons/ai";
 import { css } from "@emotion/css";
 import { SiLinkedin } from "react-icons/si";
 import Swal from "sweetalert2";
+import { motion } from "framer-motion";
 
 const TitleText = styled.p`
   font-size: calc(20px + (20-16) * ((100vw - 320px) / (1600-300)));
   font-family: RobotoThin;
   margin-bottom: 20px;
-  margin-top: 50px;
+  margin-top: 10px;
   font-weight: 500;
   letter-spacing: 6px;
   @media screen and (max-width: 575px) {
@@ -154,10 +155,17 @@ export default class pages extends Component {
       <div>
         <Navbar />
         <Container>
-          <TitleText>CONTACT ME</TitleText>
-          <SubTitleText>
-            Got a question, suggestion or work opportunity? Shoot me an email.
-          </SubTitleText>
+          <motion.div
+            transition={{ duration: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <TitleText>CONTACT ME</TitleText>
+            <SubTitleText>
+              Got a question, suggestion or work opportunity? Shoot me an email.
+            </SubTitleText>
+          </motion.div>
         </Container>
 
         <Container
@@ -171,10 +179,9 @@ export default class pages extends Component {
             background-blend-mode: screen;
             background-image: linear-gradient(black, black),
               url(https://images.pexels.com/photos/3935702/pexels-photo-3935702.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
-              @media screen and (max-width: 450px) {
-                padding: 70px 5px 70px 5px
-                  }
-          
+            @media screen and (max-width: 450px) {
+              padding: 70px 5px 70px 5px;
+            }
           `}
         >
           <Container>
@@ -193,8 +200,15 @@ export default class pages extends Component {
                 lg={5}
               >
                 <Container>
-                  <SubTitleText>Contact Info</SubTitleText>
-                  <Text>Estimated Response time is within 24 hours.</Text>
+                  <motion.div
+                    transition={{ duration: 1 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                  >
+                    <SubTitleText>Contact Info</SubTitleText>
+                    <Text>Estimated Response time is within 24 hours.</Text>
+                  </motion.div>
 
                   <Container
                     className={css`
@@ -202,54 +216,81 @@ export default class pages extends Component {
                     `}
                   >
                     <a href="mailto:Shawn.Noruzi@gmail.com">
-                      <Row>
-                        <AiOutlineMail
-                          className={css`
-                            font-size: 30px;
-                            margin-right: 23px;
-                            margin-bottom: 40px;
-                          `}
-                        />
-                        <Text>shawn.noruzi@gmail.com</Text>
-                      </Row>
+                      <motion.div
+                        transition={{ duration: 1 }}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                      >
+                        <Row>
+                          <AiOutlineMail
+                            className={css`
+                              font-size: 30px;
+                              margin-right: 23px;
+                              margin-bottom: 40px;
+                            `}
+                          />
+                          <Text>shawn.noruzi@gmail.com</Text>
+                        </Row>
+                      </motion.div>
                     </a>
 
                     <a href="tel:604-704-5402">
-                      <Row>
-                        <FiPhoneCall
-                          className={css`
-                            font-size: 30px;
-                            margin-right: 23px;
-                            margin-bottom: 40px;
-                          `}
-                        />
-
-                        <Text>+1 604-704-5402</Text>
-                      </Row>
+                      <motion.div
+                        transition={{ duration: 1 }}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                      >
+                        <Row>
+                          <FiPhoneCall
+                            className={css`
+                              font-size: 30px;
+                              margin-right: 23px;
+                              margin-bottom: 40px;
+                            `}
+                          />
+                          <Text>+1 604-704-5402</Text>
+                        </Row>
+                      </motion.div>
                     </a>
                     <a href="https://www.linkedin.com/in/shawn-noruzi/">
-                      <Row>
-                        <SiLinkedin
-                          className={css`
-                            font-size: 30px;
-                            margin-right: 23px;
-                            margin-bottom: 40px;
-                          `}
-                        />
-                        <Text>linkedin.com/in/shawn-noruzi</Text>
-                      </Row>
+                      <motion.div
+                        transition={{ duration: 1 }}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                      >
+                        <Row>
+                          <SiLinkedin
+                            className={css`
+                              font-size: 30px;
+                              margin-right: 23px;
+                              margin-bottom: 40px;
+                            `}
+                          />
+                          <Text>linkedin.com/in/shawn-noruzi</Text>
+                        </Row>
+                      </motion.div>
                     </a>
                     <a href="https://github.com/Shawn-Noruzi">
-                      <Row>
-                        <FiGithub
-                          className={css`
-                            font-size: 30px;
-                            margin-right: 23px;
-                            margin-bottom: 40px;
-                          `}
-                        />
-                        <Text>github.com/Shawn-Noruzi</Text>
-                      </Row>
+                      <motion.div
+                        transition={{ duration: 1 }}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                      >
+                        <Row>
+                          <FiGithub
+                            className={css`
+                              font-size: 30px;
+                              margin-right: 23px;
+                              margin-bottom: 40px;
+                            `}
+                          />
+                          <Text>github.com/Shawn-Noruzi</Text>
+                        </Row>
+                      </motion.div>
                     </a>
                   </Container>
                 </Container>
@@ -265,142 +306,150 @@ export default class pages extends Component {
                     border-bottom-right-radius: 25px;
                   }
                 `}
-                xs={12} lg={6}
+                xs={12}
+                lg={6}
               >
                 <form onSubmit={this.handleSubmit}>
-                  <Container>
-                    <Row>
-                      <Col>
-                        <div className="form-group">
-                          <FormText>First Name</FormText>
-                          <input
-                            className="input-box"
-                            type="text"
-                            name="firstname"
-                            onChange={this.handleChange}
-                            value={this.state.firstname}
-                          />
-                        </div>
-                      </Col>
-                      <Col>
-                        <div className="form-group">
-                          <FormText>Last Name</FormText>
-                          <input
-                            className="input-box"
-                            name="lastname"
-                            type="text"
-                            onChange={this.handleChange}
-                            value={this.state.lastname}
-                          />
-                        </div>
-                      </Col>
-                    </Row>
+                  <motion.div
+                    transition={{ duration: 1 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                  >
+                    <Container>
+                      <Row>
+                        <Col>
+                          <div className="form-group">
+                            <FormText>First Name</FormText>
+                            <input
+                              className="input-box"
+                              type="text"
+                              name="firstname"
+                              onChange={this.handleChange}
+                              value={this.state.firstname}
+                            />
+                          </div>
+                        </Col>
+                        <Col>
+                          <div className="form-group">
+                            <FormText>Last Name</FormText>
+                            <input
+                              className="input-box"
+                              name="lastname"
+                              type="text"
+                              onChange={this.handleChange}
+                              value={this.state.lastname}
+                            />
+                          </div>
+                        </Col>
+                      </Row>
 
-                    <Row>
-                      <Col>
-                        <div className="form-group">
-                          <FormText>Email</FormText>
-                          <input
-                            name="email"
-                            className="input-box"
-                            type="email"
-                            onChange={this.handleChange}
-                            value={this.state.email}
-                          />
-                        </div>
-                      </Col>
-                    </Row>
+                      <Row>
+                        <Col>
+                          <div className="form-group">
+                            <FormText>Email</FormText>
+                            <input
+                              name="email"
+                              className="input-box"
+                              type="email"
+                              onChange={this.handleChange}
+                              value={this.state.email}
+                            />
+                          </div>
+                        </Col>
+                      </Row>
 
-                    <Row>
-                      <Col>
-                        <div className="form-group">
-                          <FormText>
-                            What type of site are you interested in?
-                          </FormText>
-                          <Row onChange={this.handleChange}>
-                            <RadioContainer>
-                              <input
-                                className="radio-input"
-                                id="radiopersonal"
-                                name="radio"
-                                value="personal"
-                                type="radio"
-                              />
-                              <RadioText htmlFor="radiopersonal">
-                                Personal
-                              </RadioText>
-                            </RadioContainer>
-                            <RadioContainer>
-                              <input
-                                className="radio-input"
-                                id="radiolandingpage"
-                                name="radio"
-                                value="landingpage"
-                                type="radio"
-                              />
-                              <RadioText htmlFor="radiolandingpage">
-                                Landing Page
-                              </RadioText>
-                            </RadioContainer>
-                            <RadioContainer>
-                              <input
-                                className="radio-input"
-                                id="radioecommerce"
-                                name="radio"
-                                value="personal"
-                                type="radio"
-                              />
-                              <RadioText htmlFor="radioecommerce">
-                                E-Commerce
-                              </RadioText>
-                            </RadioContainer>
-                          </Row>
-                        </div>
-                      </Col>
-                    </Row>
+                      <Row>
+                        <Col>
+                          <div className="form-group">
+                            <FormText>
+                              What type of site are you interested in?
+                            </FormText>
+                            <Row onChange={this.handleChange}>
+                              <RadioContainer>
+                                <input
+                                  className="radio-input"
+                                  id="radiopersonal"
+                                  name="radio"
+                                  value="personal"
+                                  type="radio"
+                                />
+                                <RadioText htmlFor="radiopersonal">
+                                  Personal
+                                </RadioText>
+                              </RadioContainer>
+                              <RadioContainer>
+                                <input
+                                  className="radio-input"
+                                  id="radiolandingpage"
+                                  name="radio"
+                                  value="landingpage"
+                                  type="radio"
+                                />
+                                <RadioText htmlFor="radiolandingpage">
+                                  Landing Page
+                                </RadioText>
+                              </RadioContainer>
+                              <RadioContainer>
+                                <input
+                                  className="radio-input"
+                                  id="radioecommerce"
+                                  name="radio"
+                                  value="personal"
+                                  type="radio"
+                                />
+                                <RadioText htmlFor="radioecommerce">
+                                  E-Commerce
+                                </RadioText>
+                              </RadioContainer>
+                            </Row>
+                          </div>
+                        </Col>
+                      </Row>
 
-                    <Row>
-                      <Col>
-                        <div className="form-group">
-                          <FormText>Message</FormText>
-                          <div
-                            className={css`
-                              height: 20px;
-                            `}
-                          />
-                          <textarea
-                            name="msg"
-                            className="input-box textarea"
-                            onChange={this.handleChange}
-                            value={this.state.msg}
-                          ></textarea>
-                        </div>
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col lg={{ size: "3"}}>
-                        <button
-                          className={this.state.menu ? "" : "buttonSubmit"}
-                          disabled={this.state.sent}
-                          type="submit"
-                          className="learn-more"
-                        >
-                          <span className="circle" aria-hidden="true">
-                            <span className="icon arrow"></span>
-                          </span>
-                          <span className="button-text">
-                            {this.state.sent ? "Email Sent! " : "Send Email"}
-                          </span>
-                        </button>
-                      </Col>
-                    </Row>
+                      <Row>
+                        <Col>
+                          <div className="form-group">
+                            <FormText>Message</FormText>
+                            <div
+                              className={css`
+                                height: 20px;
+                              `}
+                            />
+                            <textarea
+                              name="msg"
+                              className="input-box textarea"
+                              onChange={this.handleChange}
+                              value={this.state.msg}
+                            ></textarea>
+                          </div>
+                        </Col>
+                      </Row>
+                      <Row>
+                        <Col lg={{ size: "3" }}>
+                          <button
+                            className={this.state.menu ? "" : "buttonSubmit"}
+                            disabled={this.state.sent}
+                            type="submit"
+                            className="learn-more"
+                          >
+                            <span className="circle" aria-hidden="true">
+                              <span className="icon arrow"></span>
+                            </span>
+                            <span className="button-text">
+                              {this.state.sent ? "Email Sent! " : "Send Email"}
+                            </span>
+                          </button>
+                        </Col>
+                      </Row>
 
-                    <div
-                      className={css`
-                        height: 50px;
-                      `}
-                    />
-                  </Container>
+                      <div
+                        className={css`
+                          height: 50px;
+                        `}
+                      />
+                    </Container>
+                  </motion.div>
                 </form>
               </Col>
             </Row>
