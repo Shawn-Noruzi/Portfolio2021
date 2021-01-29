@@ -147,7 +147,15 @@ export default class pages extends Component {
               </motion.div>
             </Col>
           </Row>
-          <Divider />
+
+          <motion.div
+            transition={{ duration: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <Divider />
+          </motion.div>
 
           <Row>
             <Col
@@ -273,7 +281,12 @@ export default class pages extends Component {
               </motion.div>
             </Col>
           </Row>
-          <Divider />
+          <motion.div
+                transition={{ duration: 1 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              >          <Divider /></motion.div>
           <Row>
             <Col sm={6} md={6} lg={{ size: "4", offset: 2 }}>
               <div
