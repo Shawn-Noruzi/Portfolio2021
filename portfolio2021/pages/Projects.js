@@ -29,6 +29,10 @@ const TitleText = styled.p`
   margin-top: 10px;
   font-weight: 500;
   letter-spacing: 6px;
+
+  @media screen and (max-width: 575px) {
+    margin-left: 20px;
+  }
 `;
 
 const SubTitleText = styled.p`

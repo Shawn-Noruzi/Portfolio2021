@@ -3,7 +3,7 @@ import { withRouter } from "next/router";
 import Link from "next/link";
 import styled from "@emotion/styled";
 import Head from "next/head";
-import { motion} from "framer-motion";
+import { motion } from "framer-motion";
 
 const NavBar = styled.nav`
   padding: 30px;
@@ -32,6 +32,15 @@ const BrandText = styled.a`
   letter-spacing: 5px;
   @media screen and (max-width: 600px) {
     font-size: 20px;
+  }
+`;
+
+const IconContainer = styled.div`
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 10%;
+  @media screen and (max-width: 600px) {
+    margin-top: 25%;
   }
 `;
 
@@ -199,13 +208,7 @@ class Navbar extends Component {
               </Link>
             </div>
 
-            <div
-              style={{
-                margin: "0 auto",
-                textAlign: "center",
-                marginTop: "10%",
-              }}
-            >
+            <IconContainer>
               <a
                 style={{ margin: "20px" }}
                 href="mailto:Shawn.Noruzi@gmail.com"
@@ -227,7 +230,7 @@ class Navbar extends Component {
               >
                 <Icon className="bi bi-github"></Icon>
               </a>
-            </div>
+            </IconContainer>
           </OverlayContent>
         </Overlay>
       </motion.div>
