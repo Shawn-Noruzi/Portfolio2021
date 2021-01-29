@@ -7,6 +7,7 @@ import { FiGithub, FiPhoneCall } from "react-icons/fi";
 import { AiOutlineMail } from "react-icons/ai";
 import { css } from "@emotion/css";
 import { SiLinkedin } from "react-icons/si";
+import { BiFile } from "react-icons/bi";
 import Swal from "sweetalert2";
 import { motion } from "framer-motion";
 
@@ -289,6 +290,26 @@ export default class pages extends Component {
                             `}
                           />
                           <Text>github.com/Shawn-Noruzi</Text>
+                        </Row>
+                      </motion.div>
+                    </a>
+
+                    <a href="/ShayanNoruziResume.docx" download>
+                      <motion.div
+                        transition={{ duration: 1 }}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                      >
+                        <Row>
+                          <BiFile
+                            className={css`
+                              font-size: 30px;
+                              margin-right: 23px;
+                              margin-bottom: 40px;
+                            `}
+                          />
+                          <Text>Download Resume</Text>
                         </Row>
                       </motion.div>
                     </a>
