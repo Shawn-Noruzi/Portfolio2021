@@ -408,7 +408,7 @@ export default class pages extends Component {
                             `}
                           />
                           <Text>
-                            <Link href="/">View Site</Link>
+                            <Link href="https://noruzi2020.vercel.app/">View Site</Link>
                           </Text>
                         </Row>
                         <Row
