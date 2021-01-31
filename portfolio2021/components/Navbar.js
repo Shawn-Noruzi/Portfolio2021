@@ -31,7 +31,8 @@ const BrandText = styled.a`
   font-size: 32px;
   font-family: RobotoReg;
   letter-spacing: 5px;
-  @media screen and (max-width: 600px) {
+  margin-left: 30px;
+  @media  (max-width: 600px) {
     font-size: 20px;
     margin-left:0px;
   }
