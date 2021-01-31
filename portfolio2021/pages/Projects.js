@@ -66,8 +66,8 @@ const CardText = styled.p`
 
 const TechText = styled.p`
   font-size: 16px;
-  font-family: RobotoThin;
-  color: grey;
+  font-family: "RobotoBold";
+  color: #8a8a8a;
 
   @media screen and (max-width: 575px) {
   }
@@ -382,8 +382,8 @@ export default class pages extends Component {
                       <p className="card-text">
                         My 2nd iteration on a portfolio. I wanted to create a
                         more conventional website compared to my slider
-                        portfolio while also picking up a few new skills - mainly
-                        next.js and typescript. I focused on creating a
+                        portfolio while also picking up a few new skills -
+                        mainly next.js and typescript. I focused on creating a
                         responsive, statically typed, easy to navigate, and
                         consume site that would utilize a single source of truth
                         for its data to create many components.
@@ -408,7 +408,9 @@ export default class pages extends Component {
                             `}
                           />
                           <Text>
-                            <Link href="https://noruzi2020.vercel.app/">View Site</Link>
+                            <Link href="https://noruzi2020.vercel.app/">
+                              View Site
+                            </Link>
                           </Text>
                         </Row>
                         <Row

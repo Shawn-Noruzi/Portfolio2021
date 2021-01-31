@@ -14,14 +14,15 @@ const NavButton = styled.div`
   z-index: 4;
   color: #777070eb;
   z-index: 4;
+  margin-right: 30px;
   font-size: 20px;
-  margin-right: 20px;
   padding: 10px;
   font-weight: 900;
   font-family: RobotoReg;
   letter-spacing: 4px;
-  @media screen and (max-width: 600px) {
+  @media (max-width: 600px) {
     font-size: 18px;
+    margin-right: 0px;
   }
 `;
 
@@ -32,6 +33,7 @@ const BrandText = styled.a`
   letter-spacing: 5px;
   @media screen and (max-width: 600px) {
     font-size: 20px;
+    margin-left:0px;
   }
 `;
 
@@ -64,7 +66,6 @@ const LinkText = styled.a`
         font-size: 23px;
         font-weight: 900;
         color: white;
-        text-decoration: none;
       },
 `;
 
@@ -91,15 +92,37 @@ const OverlayContent = styled.div`
   flex-direction: column;
 `;
 
+const LinkTextDesktop = styled.div`
+  pointer-events: ${(props) => (props.active ? "none;" : "")};
+  font-weight: ${(props) => (props.active ? "600;" : "")};
+  margin-bottom: 40px;
+  position: relative;
+  text-decoration: none;
+  color: grey;
+  margin-right: 40px;
+  margin-top: 2.5rem;
+  font-size: 20px;
+  font-family: RobotoReg;
+  letter-spacing: 4px;
+`;
+
 class Navbar extends Component {
   constructor(props) {
     super(props);
 
     const route = this.props.router.pathname;
     this.state = {
+      isDesktop: false,
       menu: true,
       url: route,
     };
+
+    this.updatePredicate = this.updatePredicate.bind(this);
+  }
+
+  componentDidMount() {
+    this.updatePredicate();
+    window.addEventListener("resize", this.updatePredicate);
   }
 
   componentWillUnmount() {
@@ -107,8 +130,13 @@ class Navbar extends Component {
     this.setState = (state, callback) => {
       return;
     };
+
+    window.removeEventListener("resize", this.updatePredicate);
   }
 
+  updatePredicate() {
+    this.setState({ isDesktop: window.innerWidth > 1050 });
+  }
   openMenu = () => {
     this.setState((prevState) => ({ menu: !prevState.menu }));
 
@@ -121,7 +149,9 @@ class Navbar extends Component {
     }
     return;
   };
+
   render() {
+    console.log("this.state", this.state);
     return (
       <motion.div
         transition={{ duration: 2 }}
@@ -135,104 +165,170 @@ class Navbar extends Component {
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
           ></link>
         </Head>
-        <NavBar className="navbar navbar-light justify-content-between">
-          <Link href="/">
-            <BrandText className="navbar-brand">NORUZI WD.</BrandText>
-          </Link>
 
-          <NavButton
-            onClick={() => this.openMenu()}
-            type="button"
-            menu={this.state.menu}
-          >
-            {this.state.menu ? "Menu" : "Close"}
-          </NavButton>
-        </NavBar>
-
-        <Overlay id="myNav">
-          <OverlayContent>
+        {this.state.isDesktop ? (
+          <NavBar className="navbar navbar-light justify-content-between">
+            <Link href="/">
+              <BrandText className="navbar-brand">NORUZI WD.</BrandText>
+            </Link>
             <div
               style={{
                 display: "flex",
-                flexDirection: "column",
-                height: "200px",
               }}
             >
-              <Link href="/" scroll={false}>
-                <LinkText
-                  active={this.state.url == "/" ? true : false}
-                  onClick={() => {
-                    this.openMenu();
-                  }}
-                  className="linkText"
-                >
-                  {this.state.url == "/" ? "- Home - " : "Home"}
-                </LinkText>
-              </Link>
               <Link href="/AboutMe" scroll={false}>
-                <LinkText
-                  active={this.state.url == "/AboutMe" ? true : false}
-                  onClick={() => {
-                    this.openMenu();
+                <motion.div
+                  whileHover={{
+                    scale: 1.2,
+                    transition: { duration: 0.2 },
                   }}
-                  className="linkText"
+                  whileTap={{ scale: 0.9 }}
                 >
-                  {this.state.url == "/AboutMe" ? "- About - " : "About"}
-                </LinkText>
+                  <LinkTextDesktop
+                    active={this.state.url == "/AboutMe" ? true : false}
+                  >
+                    About
+                  </LinkTextDesktop>
+                </motion.div>
               </Link>
 
               <Link href="/Projects" scroll={false}>
-                <LinkText
-                  active={this.state.url == "/Projects" ? true : false}
-                  onClick={() => {
-                    this.openMenu();
+                <motion.div
+                  whileHover={{
+                    scale: 1.2,
+                    transition: { duration: 0.2 },
                   }}
-                  className="linkText"
+                  whileTap={{ scale: 0.9 }}
                 >
-                  {this.state.url == "/Projects"
-                    ? "- Portfolio - "
-                    : "Portfolio"}
-                </LinkText>
+                  <LinkTextDesktop
+                    active={this.state.url == "/Projects" ? true : false}
+                  >
+                    Portfolio
+                  </LinkTextDesktop>
+                </motion.div>
               </Link>
 
               <Link href="/ContactMe" scroll={false}>
-                <LinkText
-                  active={this.state.url == "/ContactMe" ? true : false}
-                  onClick={() => {
-                    this.openMenu();
+                <motion.div
+                  whileHover={{
+                    scale: 1.2,
+                    transition: { duration: 0.2 },
                   }}
-                  className="linkText"
+                  whileTap={{ scale: 0.9 }}
                 >
-                  {this.state.url == "/ContactMe" ? "- Contact - " : "Contact"}
-                </LinkText>
+                  <LinkTextDesktop
+                    active={this.state.url == "/ContactMe" ? true : false}
+                  >
+                    Contact
+                  </LinkTextDesktop>
+                </motion.div>
               </Link>
             </div>
+          </NavBar>
+        ) : (
+          <>
+            <NavBar className="navbar navbar-light justify-content-between">
+              <Link href="/">
+                <BrandText className="navbar-brand">NORUZI WD.</BrandText>
+              </Link>
 
-            <IconContainer>
-              <a
-                style={{ margin: "20px" }}
-                href="mailto:Shawn.Noruzi@gmail.com"
+              <NavButton
+                onClick={() => this.openMenu()}
+                type="button"
+                menu={this.state.menu}
               >
-                <Icon className="bi bi-envelope"></Icon>
-              </a>
-              <a style={{ margin: "20px" }} href="tel:604-704-5402">
-                <Icon className="bi bi-telephone"></Icon>
-              </a>
-              <a
-                style={{ margin: "20px" }}
-                href="https://www.linkedin.com/in/shawn-noruzi/"
-              >
-                <Icon className="bi bi-linkedin"></Icon>
-              </a>
-              <a
-                style={{ margin: "20px" }}
-                href="https://github.com/Shawn-Noruzi"
-              >
-                <Icon className="bi bi-github"></Icon>
-              </a>
-            </IconContainer>
-          </OverlayContent>
-        </Overlay>
+                {this.state.menu ? "Menu" : "Close"}
+              </NavButton>
+            </NavBar>
+
+            <Overlay id="myNav">
+              <OverlayContent>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    height: "200px",
+                  }}
+                >
+                  <Link href="/" scroll={false}>
+                    <LinkText
+                      active={this.state.url == "/" ? true : false}
+                      onClick={() => {
+                        this.openMenu();
+                      }}
+                      className="linkText"
+                    >
+                      {this.state.url == "/" ? "- Home - " : "Home"}
+                    </LinkText>
+                  </Link>
+                  <Link href="/AboutMe" scroll={false}>
+                    <LinkText
+                      active={this.state.url == "/AboutMe" ? true : false}
+                      onClick={() => {
+                        this.openMenu();
+                      }}
+                      className="linkText"
+                    >
+                      {this.state.url == "/AboutMe" ? "- About - " : "About"}
+                    </LinkText>
+                  </Link>
+
+                  <Link href="/Projects" scroll={false}>
+                    <LinkText
+                      active={this.state.url == "/Projects" ? true : false}
+                      onClick={() => {
+                        this.openMenu();
+                      }}
+                      className="linkText"
+                    >
+                      {this.state.url == "/Projects"
+                        ? "- Portfolio - "
+                        : "Portfolio"}
+                    </LinkText>
+                  </Link>
+
+                  <Link href="/ContactMe" scroll={false}>
+                    <LinkText
+                      active={this.state.url == "/ContactMe" ? true : false}
+                      onClick={() => {
+                        this.openMenu();
+                      }}
+                      className="linkText"
+                    >
+                      {this.state.url == "/ContactMe"
+                        ? "- Contact - "
+                        : "Contact"}
+                    </LinkText>
+                  </Link>
+                </div>
+
+                <IconContainer>
+                  <a
+                    style={{ margin: "20px" }}
+                    href="mailto:Shawn.Noruzi@gmail.com"
+                  >
+                    <Icon className="bi bi-envelope"></Icon>
+                  </a>
+                  <a style={{ margin: "20px" }} href="tel:604-704-5402">
+                    <Icon className="bi bi-telephone"></Icon>
+                  </a>
+                  <a
+                    style={{ margin: "20px" }}
+                    href="https://www.linkedin.com/in/shawn-noruzi/"
+                  >
+                    <Icon className="bi bi-linkedin"></Icon>
+                  </a>
+                  <a
+                    style={{ margin: "20px" }}
+                    href="https://github.com/Shawn-Noruzi"
+                  >
+                    <Icon className="bi bi-github"></Icon>
+                  </a>
+                </IconContainer>
+              </OverlayContent>
+            </Overlay>
+          </>
+        )}
       </motion.div>
     );
   }

@@ -55,6 +55,7 @@ const Text = styled.p`
 const LinkedText = styled.p`
   font-size: 18px;
   font-weight: 500;
+  color: blue;
   cursor: pointer;
 transform: scale(1.1);
   font-family: RobotoReg;
@@ -69,19 +70,21 @@ const SpacerText = styled.p`
   font-size: 18px;
   color: grey;
   font-weight: 500;
-  margin-left: 10px;
-  margin-right: 10px;
-  @media screen and (max-width: 400px) {
-    margin-left: 40px;
+  margin-left: 30px;
+  margin-right: 30px;
+  @media (max-width: 500px) {
+    display: none;
   }
 `;
 
 const LinksRow = styled(Row)`
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 500px) {
     margin-top: 50px;
     display: flex;
     flex-direction: column;
     text-align: start;
+
+    margin-left: 3px;
   }
 `;
 
@@ -184,7 +187,15 @@ export default function Home() {
                 bottom: 0,
               }}
             >
-              <LinkedText>Read about me</LinkedText>
+              <motion.div
+                whileHover={{
+                  scale: 1.1,
+                  transition: { duration: 0.2 },
+                }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <LinkedText>Read about me</LinkedText>
+              </motion.div>
             </motion.div>
           </Link>
           <SpacerText> - </SpacerText>
@@ -202,7 +213,15 @@ export default function Home() {
                 bottom: 0,
               }}
             >
-              <LinkedText>See my work</LinkedText>
+              <motion.div
+                whileHover={{
+                  scale: 1.1,
+                  transition: { duration: 0.2 },
+                }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <LinkedText>See my work</LinkedText>
+              </motion.div>
             </motion.div>
           </Link>
           <SpacerText> - </SpacerText>
@@ -220,7 +239,15 @@ export default function Home() {
                 bottom: 0,
               }}
             >
-              <LinkedText>Contact me</LinkedText>
+              <motion.div
+                whileHover={{
+                  scale: 1.1,
+                  transition: { duration: 0.2 },
+                }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <LinkedText>Contact me</LinkedText>
+              </motion.div>
             </motion.div>
           </Link>
         </LinksRow>
