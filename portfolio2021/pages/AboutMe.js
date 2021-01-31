@@ -309,7 +309,7 @@ export default class pages extends Component {
                 <SubTitleText>Fun Facts </SubTitleText>
                 <Text>
                   I was educated and raised in British Columbia, Canada. My
-                  partner in crime is my pet cat Oscar. In my free time, I enjoy
+                  partner in crime is my pet cat Oscar. I enjoy
                   teaching others front end skills or mathematics - I like to
                   help people level up and see their growth in real time. I also
                   enjoy competitive gaming, rugby or taking time to perfect the
