@@ -155,7 +155,7 @@ class Navbar extends Component {
     console.log("this.state", this.state);
     return (
       <motion.div
-        transition={{ duration: 2 }}
+        transition={{ duration: 1 }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}

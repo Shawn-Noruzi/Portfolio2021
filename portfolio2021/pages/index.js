@@ -139,7 +139,7 @@ export default function Home() {
             <Text>I'm </Text>
           </motion.div>
           <motion.div
-            transition={{ duration: 2 }}
+            transition={{ duration: 1}}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -156,7 +156,7 @@ export default function Home() {
         </Row>
         <Row>
           <motion.div
-            transition={{ duration: 3 }}
+            transition={{ duration: 1 }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -175,7 +175,7 @@ export default function Home() {
         <LinksRow>
           <Link href="/AboutMe">
             <motion.div
-              transition={{ duration: 3 }}
+              transition={{ duration: 1 }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -201,7 +201,7 @@ export default function Home() {
           <SpacerText> - </SpacerText>
           <Link href="/Projects">
             <motion.div
-              transition={{ duration: 4 }}
+              transition={{ duration: 1 }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -227,7 +227,7 @@ export default function Home() {
           <SpacerText> - </SpacerText>
           <Link href="/ContactMe">
             <motion.div
-              transition={{ duration: 4 }}
+              transition={{ duration: 1 }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
