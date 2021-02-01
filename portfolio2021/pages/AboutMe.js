@@ -115,7 +115,6 @@ export default class pages extends Component {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
               >
-                {" "}
                 <img
                   className={css`
                     border-radius: 10px;
@@ -196,7 +195,7 @@ export default class pages extends Component {
                     }
                   `}
                   src="/images/website.jpg"
-                  alt="Picture of the author"
+                  alt="website"
                   width={300}
                   height={500}
                 />
@@ -247,7 +246,6 @@ export default class pages extends Component {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
               >
-                {" "}
                 <img
                   className={css`
                     border-radius: 10px;
@@ -272,7 +270,7 @@ export default class pages extends Component {
                     }
                   `}
                   src="/images/website.jpg"
-                  alt="Picture of the author"
+                  alt="website"
                   width={300}
                   height={500}
                 />
@@ -356,7 +354,7 @@ export default class pages extends Component {
                     }
                   `}
                   src="/images/cheese.jpg"
-                  alt="Picture of the author"
+                  alt="cheese"
                   width={300}
                   height={500}
                 />

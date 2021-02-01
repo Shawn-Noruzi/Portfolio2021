@@ -176,7 +176,7 @@ export default class pages extends Component {
                     <img
                       src="/images/placespeak.PNG"
                       className="card-img"
-                      alt="..."
+                      alt="placespeak"
                     />
                   </div>
                   <div className="col-md-6">
@@ -229,7 +229,7 @@ export default class pages extends Component {
                     <img
                       src="/images/gitpay.PNG"
                       className="card-img"
-                      alt="..."
+                      alt="gitpay"
                     />
                   </div>
                   <div className="col-md-6">
@@ -295,7 +295,7 @@ export default class pages extends Component {
                     <img
                       src="/images/mentorship.PNG"
                       className="card-img"
-                      alt="..."
+                      alt="mentorship"
                     />
                   </div>
                   <div className="col-md-6">
@@ -364,7 +364,7 @@ export default class pages extends Component {
                     <img
                       src="/images/portfolio.PNG"
                       className="card-img"
-                      alt="..."
+                      alt="portfolio"
                     />
                   </div>
                   <div className="col-md-6">

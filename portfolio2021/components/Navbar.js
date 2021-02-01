@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { withRouter } from "next/router";
 import Link from "next/link";
 import styled from "@emotion/styled";
-import Head from "next/head";
 import { motion } from "framer-motion";
 
 const NavBar = styled.nav`
@@ -159,13 +158,6 @@ class Navbar extends Component {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <Head>
-          <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
-          ></link>
-        </Head>
-
         {this.state.isDesktop ? (
           <NavBar className="navbar navbar-light justify-content-between">
             <Link href="/">
@@ -301,30 +293,6 @@ class Navbar extends Component {
                     </LinkText>
                   </Link>
                 </div>
-
-                <IconContainer>
-                  <a
-                    style={{ margin: "20px" }}
-                    href="mailto:Shawn.Noruzi@gmail.com"
-                  >
-                    <Icon className="bi bi-envelope"></Icon>
-                  </a>
-                  <a style={{ margin: "20px" }} href="tel:604-704-5402">
-                    <Icon className="bi bi-telephone"></Icon>
-                  </a>
-                  <a
-                    style={{ margin: "20px" }}
-                    href="https://www.linkedin.com/in/shawn-noruzi/"
-                  >
-                    <Icon className="bi bi-linkedin"></Icon>
-                  </a>
-                  <a
-                    style={{ margin: "20px" }}
-                    href="https://github.com/Shawn-Noruzi"
-                  >
-                    <Icon className="bi bi-github"></Icon>
-                  </a>
-                </IconContainer>
               </OverlayContent>
             </Overlay>
           </>
