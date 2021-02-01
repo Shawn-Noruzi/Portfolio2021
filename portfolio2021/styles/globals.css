@@ -57,11 +57,6 @@ a {
 }
 
 @font-face {
-  font-family: SpaceReg;
-  src: url(../styles/fonts/SpaceMono-Regular.ttf);
-}
-
-@font-face {
   font-family: RobotoReg;
   src: url(../styles/fonts/Roboto-Regular.ttf);
 }
