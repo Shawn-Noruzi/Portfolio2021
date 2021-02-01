@@ -140,7 +140,7 @@ export default class pages extends Component {
         });
         console.error("Email Error:", err);
       });
-    console.log("this.state", this.state);
+
     this.setState({
       firstname: "",
       lastname: "",

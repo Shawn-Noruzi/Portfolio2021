@@ -152,7 +152,7 @@ class Navbar extends Component {
   };
 
   render() {
-    console.log("this.state", this.state);
+
     return (
       <motion.div
         transition={{ duration: 1 }}
