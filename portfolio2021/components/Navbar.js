@@ -53,7 +53,7 @@ const Icon = styled.i`
 `;
 
 const LinkText = styled.a`
-      pointer-events: ${(props) => (props.active ? "none;" : "")};  
+
       margin-bottom: 40px;
       position: relative;
       text-decoration: none;
@@ -94,7 +94,7 @@ const OverlayContent = styled.div`
 `;
 
 const LinkTextDesktop = styled.div`
-  pointer-events: ${(props) => (props.active ? "none;" : "")};
+cursor: pointer;
   font-weight: ${(props) => (props.active ? "600;" : "")};
   margin-bottom: 40px;
   position: relative;
