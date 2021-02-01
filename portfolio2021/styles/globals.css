@@ -65,12 +65,6 @@ a {
   font-family: RobotoBold;
   src: url(../styles/fonts/Roboto-Bold.ttf);
 }
-
-@font-face {
-  font-family: RobotoMed;
-  src: url(../styles/fonts/Roboto-Medium.ttf);
-}
-
 @font-face {
   font-family: RobotoThin;
   src: url(../styles/fonts/Roboto-Thin.ttf);

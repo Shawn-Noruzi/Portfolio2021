@@ -29,7 +29,6 @@ const TitleText = styled.p`
   margin-top: 10px;
   font-weight: 500;
   letter-spacing: 6px;
-
   @media screen and (max-width: 575px) {
     margin-left: 20px;
   }
@@ -43,7 +42,6 @@ const SubTitleText = styled.p`
   margin: 0 auto;
   text-align: center;
   width: 80%;
-
   @media screen and (max-width: 575px) {
     margin-top: 20px;
     font-size: 16px;
@@ -56,7 +54,6 @@ const CardText = styled.p`
   font-family: RobotoBold;
   letter-spacing: 2px;
   width: 80%;
-
   @media screen and (max-width: 575px) {
     margin-top: 20px;
     font-size: 16px;
@@ -68,9 +65,6 @@ const TechText = styled.p`
   font-size: 16px;
   font-family: "RobotoBold";
   color: #8a8a8a;
-
-  @media screen and (max-width: 575px) {
-  }
 `;
 const Text = styled.p`
   font-size: 18px;
@@ -85,9 +79,6 @@ const Text = styled.p`
 const Divider = styled.div`
   margin-top: 30px;
   margin-bottom: 30px;
-
-  @media screen and (max-width: 800px) {
-  }
 `;
 
 export default class pages extends Component {

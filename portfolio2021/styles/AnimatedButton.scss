@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Mukta:700");
-
 $bg: #f3f8fa;
 $white: #fff;
 $black: #282936;
@@ -11,7 +10,6 @@ $black: #282936;
 ) {
   transition: $property $duration $ease;
 }
-
 button {
   position: relative;
   display: inline-block;
@@ -95,7 +93,6 @@ button {
     }
   }
 }
-
 .buttonSubmit {
   .circle {
     width: 130%;

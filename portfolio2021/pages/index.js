@@ -19,7 +19,6 @@ const BgText = styled.p`
   width: 100%;
   text-align: center;
   font-family: RobotoReg;
-
   @media screen and (max-width: 800px) {
     margin-top: 100px;
     width: 400px;
@@ -83,7 +82,6 @@ const LinksRow = styled(Row)`
     display: flex;
     flex-direction: column;
     text-align: start;
-
     margin-left: 3px;
   }
 `;

@@ -1,9 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/globals.css";
 import "../styles/AnimatedButton.scss";
-/*will only render one component at a time. 
-The exiting component will finished its exit animation before the entering component is rendered.
-*/
 import { motion } from "framer-motion";
 
 function MyApp({ Component, pageProps, router }) {
@@ -20,7 +17,6 @@ function MyApp({ Component, pageProps, router }) {
           opacity: 1,
         },
         transition:{ delay: 1 }
-
       }}
     >
       <Component {...pageProps} />;

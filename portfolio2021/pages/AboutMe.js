@@ -7,10 +7,11 @@ import { css } from "@emotion/css";
 import { motion } from "framer-motion";
 
 const TitleText = styled.p`
-  font-size: calc(20px + (20-16) * ((100vw - 320px) / (1600-300)));
+  font-size: 32px;
   font-family: RobotoThin;
   margin-bottom: 20px;
   margin-top: 10px;
+  margin-left:50px;
   font-weight: 500;
   letter-spacing: 6px;
   @media screen and (max-width: 575px) {
@@ -43,8 +44,6 @@ const Divider = styled.div`
   margin-top: 50px;
   margin-bottom: 50px;
   border-bottom: solid 2px grey;
-  @media screen and (max-width: 800px) {
-  }
 `;
 
 export default class pages extends Component {
@@ -86,7 +85,6 @@ export default class pages extends Component {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                 >
-                  {" "}
                   <SubTitleText>Experience </SubTitleText>
                   <Text>
                     I studied Computer Science and Mathematics at Simon Fraser

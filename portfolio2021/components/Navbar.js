@@ -53,7 +53,6 @@ const Icon = styled.i`
 `;
 
 const LinkText = styled.a`
-
       margin-bottom: 40px;
       position: relative;
       text-decoration: none;
