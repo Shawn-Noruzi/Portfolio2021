@@ -10,6 +10,7 @@ import { SiLinkedin } from "react-icons/si";
 import { BiFile } from "react-icons/bi";
 import Swal from "sweetalert2";
 import { motion } from "framer-motion";
+import Head from "next/head";
 
 const TitleText = styled.p`
   font-size: calc(20px + (20-16) * ((100vw - 320px) / (1600-300)));
@@ -154,6 +155,10 @@ export default class pages extends Component {
   render() {
     return (
       <div>
+        <Head>
+          <title>Contact Me</title>
+          <meta name="Description" content="Contact me using with the form below. Reply times are within 24 hours. "></meta>
+        </Head>
         <Navbar />
         <Container>
           <motion.div

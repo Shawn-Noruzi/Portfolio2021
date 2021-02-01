@@ -21,6 +21,7 @@ import { SiGraphql } from "react-icons/si";
 import { VscGithub } from "react-icons/vsc";
 import { MdWebAsset } from "react-icons/md";
 import { motion } from "framer-motion";
+import Head from "next/head";
 
 const TitleText = styled.p`
   font-size: calc(20px + (20-16) * ((100vw - 320px) / (1600-300)));
@@ -85,6 +86,13 @@ export default class pages extends Component {
   render() {
     return (
       <div>
+        <Head>
+          <title>My Projects</title>
+          <meta
+            name="Description"
+            content=""
+          ></meta>
+        </Head>
         <Navbar />
         <motion.div
           transition={{ duration: 1 }}

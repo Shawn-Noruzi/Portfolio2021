@@ -92,6 +92,10 @@ export default function Home() {
       <Head>
         <title>Shawn Noruzi</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="Description"
+          content="Shayan Noruzi - Front End Developer, UX/UI Designer. I make clean websites that work on all devices. Check out my work, read a bit about me or contact me. "
+        ></meta>
       </Head>
       <Navbar />
 
@@ -137,7 +141,7 @@ export default function Home() {
             <Text>I'm </Text>
           </motion.div>
           <motion.div
-            transition={{ duration: 1}}
+            transition={{ duration: 1 }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

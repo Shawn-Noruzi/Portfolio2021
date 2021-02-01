@@ -58,14 +58,17 @@ a {
 
 @font-face {
   font-family: RobotoReg;
+  font-display: swap;
   src: url(../styles/fonts/Roboto-Regular.ttf);
 }
 
 @font-face {
   font-family: RobotoBold;
+  font-display: swap;
   src: url(../styles/fonts/Roboto-Bold.ttf);
 }
 @font-face {
   font-family: RobotoThin;
+  font-display: swap;
   src: url(../styles/fonts/Roboto-Thin.ttf);
 }

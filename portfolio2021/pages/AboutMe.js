@@ -5,13 +5,14 @@ import { Container, Row, Col } from "reactstrap";
 import styled from "@emotion/styled";
 import { css } from "@emotion/css";
 import { motion } from "framer-motion";
+import Head from "next/head";
 
 const TitleText = styled.p`
   font-size: 32px;
   font-family: RobotoThin;
   margin-bottom: 20px;
   margin-top: 10px;
-  margin-left:50px;
+  margin-left: 50px;
   font-weight: 500;
   letter-spacing: 6px;
   @media screen and (max-width: 575px) {
@@ -50,6 +51,13 @@ export default class pages extends Component {
   render() {
     return (
       <div>
+        <Head>
+          <title>About Me</title>
+          <meta
+            name="Description"
+            content="Studied Computer Science and Math at SFU, created several apps and projects focused in front end development. My mission is to bring my front end expertise to the hands of my clients to create impactful branding and products. I also have a cat named Oscar and I'm trying to figure out how to make a good Mac and Cheese."
+          ></meta>
+        </Head>
         <Navbar />
         <Container>
           <Row>
@@ -60,7 +68,6 @@ export default class pages extends Component {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
               >
-                {" "}
                 <TitleText> About Me</TitleText>
               </motion.div>
             </Col>
@@ -278,11 +285,14 @@ export default class pages extends Component {
             </Col>
           </Row>
           <motion.div
-                transition={{ duration: 1 }}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-              >          <Divider /></motion.div>
+            transition={{ duration: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            {" "}
+            <Divider />
+          </motion.div>
           <Row>
             <Col sm={6} md={6} lg={{ size: "4", offset: 2 }}>
               <div
@@ -305,12 +315,11 @@ export default class pages extends Component {
                 <SubTitleText>Fun Facts </SubTitleText>
                 <Text>
                   I was educated and raised in British Columbia, Canada. My
-                  partner in crime is my pet cat Oscar. I enjoy
-                  teaching others front end skills or mathematics - I like to
-                  help people level up and see their growth in real time. I also
-                  enjoy competitive gaming, rugby or taking time to perfect the
-                  greatest gourmet mac and cheese recipe known to man-kind (a
-                  work in progress).
+                  partner in crime is my pet cat Oscar. I enjoy teaching others
+                  front end skills or mathematics - I like to help people level
+                  up and see their growth in real time. I also enjoy competitive
+                  gaming, rugby or taking time to perfect the greatest gourmet
+                  mac and cheese recipe known to man-kind (a work in progress).
                 </Text>
               </div>
             </Col>

@@ -97,7 +97,7 @@ cursor: pointer;
   margin-bottom: 40px;
   position: relative;
   text-decoration: none;
-  color: grey;
+  color: black;
   margin-right: 40px;
   margin-top: 2.5rem;
   font-size: 20px;
