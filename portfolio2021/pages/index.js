@@ -13,7 +13,7 @@ const BgText = styled.p`
   top: 25%;
   text-shadow: 2px 2px #fffffffc;
   color: #c5c5c51f;
-  font-size: calc(50px + (150-100) * ((100vw - 320px) / (1600-300)));
+  font-size: 10em;
   z-index: -1;
   letter-spacing: 10px;
   width: 100%;
