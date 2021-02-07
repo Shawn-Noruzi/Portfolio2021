@@ -24,7 +24,7 @@ import { motion } from "framer-motion";
 import Head from "next/head";
 
 const TitleText = styled.p`
-  font-size: calc(20px + (20-16) * ((100vw - 320px) / (1600-300)));
+  font-size: 32px;
   font-family: RobotoThin;
   margin-bottom: 20px;
   margin-top: 10px;
