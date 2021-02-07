@@ -16,7 +16,7 @@ const TitleText = styled.p`
   font-weight: 500;
   letter-spacing: 6px;
   @media screen and (max-width: 575px) {
-    margin-bottom: 0px;
+    margin-left: 20px;
   }
 `;
 
