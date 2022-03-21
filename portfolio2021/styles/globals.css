@@ -37,7 +37,9 @@ a {
   background-color: black;
 
 }
-
+.navCursor{
+  cursor:pointer;
+}
 .input-box {
   width: 100%;
   background: transparent;

@@ -161,7 +161,7 @@ class Navbar extends Component {
         {this.state.isDesktop ? (
           <NavBar className="navbar navbar-light justify-content-between">
             <Link href="/">
-              <BrandText className="navbar-brand">NORUZI WD.</BrandText>
+              <BrandText className="navbar-brand navCursor">NORUZI WD.</BrandText>
             </Link>
             <div
               style={{
