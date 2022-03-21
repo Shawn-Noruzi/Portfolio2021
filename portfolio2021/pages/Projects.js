@@ -88,10 +88,7 @@ export default class pages extends Component {
       <div>
         <Head>
           <title>My Projects</title>
-          <meta
-            name="Description"
-            content=""
-          ></meta>
+          <meta name="Description" content=""></meta>
         </Head>
         <Navbar />
         <motion.div
@@ -178,6 +175,112 @@ export default class pages extends Component {
                 margin: 0px;
               `}
             >
+              <div className="card mb-3">
+                <div className="row no-gutters">
+                  <div className="col-md-6">
+                    <img
+                      src="/images/centra.PNG"
+                      className="card-img"
+                      alt="placespeak"
+                    />
+                  </div>
+                  <div className="col-md-6">
+                    <div className="card-body">
+                      <CardText>Centra Windows</CardText>
+                      <p className="card-text">
+                        In 2021 I was hired full time as a lead front end
+                        engineer at Centra Windows where I developed a 300+ page
+                        website working along side several back end developers.
+                        I designed, tested, deployed and developed the
+                        application - gathering requirements and feedback from
+                        stakeholders, working with the marketing department to
+                        generate new landing pages and components. With an
+                        integrated payment portal, custom CMS, Marketo API for
+                        user analytics as well as Google Analytics/Google Map
+                        integrations - the website was packed with features.
+                        
+                      </p>
+                      <Row>
+                        <Col>
+                          <TechText>
+                            React, Next.js, CSS/SASS, Bootstrap
+                          </TechText>
+                        </Col>
+                      </Row>
+                      <Row>
+                        <Row
+                          className={css`
+                            margin: 10px;
+                          `}
+                        >
+                          <MdWebAsset
+                            className={css`
+                              font-size: 25px;
+                              color: #7292cc;
+                            `}
+                          />
+                          <Text>
+                            <Link href="https://centrawindows.com/">
+                              View Site
+                            </Link>
+                          </Text>
+                        </Row>
+                      </Row>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <Divider />
+
+              <div className="card mb-3">
+                <div className="row no-gutters">
+                  <div className="col-md-6">
+                    <img
+                      src="/images/logan.PNG"
+                      className="card-img"
+                      alt="logan"
+                    />
+                  </div>
+                  <div className="col-md-6">
+                    <div className="card-body">
+                      <CardText>Logan Wong Fitness</CardText>
+                      <p className="card-text">
+                        In 2021 I created a fitness site for a client to manage promotional content and use as a platform for his users to contact him on. 
+                      </p>
+                      <Row>
+                        <Col>
+                          <TechText>
+                            React, CSS, Bootstrap, Framer
+                          </TechText>
+                        </Col>
+                      </Row>
+                      <Row>
+                        <Row
+                          className={css`
+                            margin: 10px;
+                          `}
+                        >
+                          <MdWebAsset
+                            className={css`
+                              font-size: 25px;
+                              color: #7292cc;
+                            `}
+                          />
+                          <Text>
+                            <Link href="https://loganwongfitness.com/">
+                              View Site
+                            </Link>
+                          </Text>
+                        </Row>
+                      </Row>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <Divider />
+
               <div className="card mb-3">
                 <div className="row no-gutters">
                   <div className="col-md-6">
@@ -356,6 +459,70 @@ export default class pages extends Component {
                           />
                           <Text>
                             <Link href="https://github.com/nikhil-g777/openmentorship">
+                              Github
+                            </Link>
+                          </Text>
+                        </Row>
+                      </Row>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <Divider />
+              <div className="card mb-3">
+                <div className="row no-gutters">
+                  <div className="col-md-6">
+                    <img
+                      src="/images/portfolio1.PNG"
+                      className="card-img"
+                      alt="portfolio"
+                    />
+                  </div>
+                  <div className="col-md-6">
+                    <div className="card-body">
+                      <CardText>Portfolio</CardText>
+                      <p className="card-text">
+                        My 3rd iteration on a portfolio. I wanted to create a
+                        more fun version using a new Awesome-Slider library I found. 
+                      </p>
+                      <Row>
+                        <Col>
+                          <TechText>
+                            React, CSS, Awesome-Slider
+                          </TechText>
+                        </Col>
+                      </Row>
+                      <Row>
+                        <Row
+                          className={css`
+                            margin: 10px;
+                          `}
+                        >
+                          <MdWebAsset
+                            className={css`
+                              font-size: 25px;
+                              color: #7292cc;
+                            `}
+                          />
+                          <Text>
+                            <Link href="https://noruzi.vercel.app/">
+                              View Site
+                            </Link>
+                          </Text>
+                        </Row>
+                        <Row
+                          className={css`
+                            margin: 10px;
+                          `}
+                        >
+                          <VscGithub
+                            className={css`
+                              font-size: 25px;
+                              color: #7292cc;
+                            `}
+                          />
+                          <Text>
+                            <Link href="https://github.com/Shawn-Noruzi/PortfolioShawnNoruzi">
                               Github
                             </Link>
                           </Text>

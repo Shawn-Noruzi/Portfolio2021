@@ -33,6 +33,9 @@ a {
 
 .card-img {
   height: 100%;
+  object-fit: contain;
+  background-color: black;
+
 }
 
 .input-box {
